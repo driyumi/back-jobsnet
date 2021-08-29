@@ -1,6 +1,61 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
+/**
+*  @swagger
+*  definitions:
+*    Curriculo:
+*      type: object
+*      properties:
+*        id:
+*          type: uint
+*        nome_completo:
+*                 type: string
+*               cargo:
+*                 type: string
+*               data_nascimento:
+*                 type: string
+*               estado_civil:
+*                  type: string
+*                sexo:
+*                  type: string
+*                cep:
+*                  type: string
+*                cidade:
+*                  type: string
+*                estado:
+*                  type: string
+*                logradouro:
+*                  type: string
+*                numero:
+*                  type: string
+*                complemento:
+*                  type: string
+*                bairro:
+*                  type: string
+*                telefone_fixo1:
+*                  type: string
+*                telefone_fixo2:
+*                  type: string
+*                celular:
+*                  type: string
+*                contato:
+*                  type: string
+*                email:
+*                  type: string
+*                identidade:
+*                  type: string
+*                cpf:
+*                  type: string
+*                possui_veiculo:
+*                  type: string
+*                habilitacao:
+*                  type: string
+*      required:
+*        - username
+*        - email
+*        - password
+*/
 export default class Curriculo extends BaseModel {
   @column({ isPrimary: true })
   public id: number

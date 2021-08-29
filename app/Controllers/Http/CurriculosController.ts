@@ -12,6 +12,65 @@ export default class CurriculosController {
   public async create ({}: HttpContextContract) {
   }
 
+  /**
+  * @swagger
+  * /cadastrar:
+  *   post:
+  *     summary: Cadastrar currículos
+  *     requestBody:
+  *       content:
+  *         application/json:
+  *           schema:
+  *             type: object
+  *             properties:
+  *               nome_completo:
+  *                 type: string
+  *               cargo:
+  *                 type: string
+  *               data_nascimento:
+  *                 type: string
+  *               estado_civil:
+  *                  type: string
+  *                sexo:
+  *                  type: string
+  *                cep:
+  *                  type: string
+  *                cidade:
+  *                  type: string
+  *                estado:
+  *                  type: string
+  *                logradouro:
+  *                  type: string
+  *                numero:
+  *                  type: string
+  *                complemento:
+  *                  type: string
+  *                bairro:
+  *                  type: string
+  *                telefone_fixo1:
+  *                  type: string
+  *                telefone_fixo2:
+  *                  type: string
+  *                celular:
+  *                  type: string
+  *                contato:
+  *                  type: string
+  *                email:
+  *                  type: string
+  *                identidade:
+  *                  type: string
+  *                cpf:
+  *                  type: string
+  *                possui_veiculo:
+  *                  type: string
+  *                habilitacao:
+  *                  type: string
+  *     responses:
+  *       200:
+  *         description: Foi enviado com sucesso
+  *         example:
+  *           message: Currículo enviado com sucesso!
+  */
   public async store ({ request, response }: HttpContextContract) {
     try {
       const data = request.only([
